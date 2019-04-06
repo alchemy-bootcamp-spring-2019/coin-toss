@@ -1,5 +1,11 @@
 const test = QUnit.test;
 
-test('time to write a test', function(assert) {
-    assert.equal(true, false);
+test('get Heads', function(assert) {
+    //Arrange
+    const expected = 'heads';
+    const randomResult = .4;
+    //Act
+    const side = getHeadsOrTails(randomResult);
+    //Assert
+    assert.equal(side, expected);
 });
