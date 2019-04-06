@@ -11,6 +11,11 @@ section, form {
     margin: auto;
 }
 
+#coin-toss img {
+    height: 150px;
+    width: auto;
+}
+
 .score-count {
     font-weight: bold;
     margin-right: 10px;
