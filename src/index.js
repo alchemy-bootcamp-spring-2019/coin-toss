@@ -20,13 +20,29 @@ function flipCoinAndReveal() {
         imageSource = 'assets/tails.jpg';
     }
     coinImage.src = imageSource;
+
+    return tossedSide;
 }
 
+function winOrLoseAndSetStatus(userChoice, tossedSide) {
+    if(userChoice === tossedSide) {
+        status.textContent = 'You win!';
+        wins++;
+        winCount.textContent = wins;
+    }
+    else {
+        status.textContent = 'You lose!';
+        losses++;
+        lossCount.textContent = losses;
+    } 
+}
 
 pickForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const userChoice = pickForm.elements.side.value;
 
-    flipCoinAndReveal();
+    const result = flipCoinAndReveal();
+
+    winOrLoseAndSetStatus(userChoice, result);
 });
