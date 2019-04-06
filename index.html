@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Toss</title>
+    <link rel="stylesheet" href="src/main.css">
+</head>
+<body>
+    <header>
+        <h1>Coin Toss</h1>
+    </header>
+    <section>
+        Wins: <span id="win-count" class="score-count">0</span>
+        Losses: <span id="loss-count" class="score-count">0</span>
+    </section>
+
+    <section id="status">
+        Bet it all on the coin toss!
+    </section>
+
+    <form id="pick-form">
+        <p>
+            <label>
+                <input type="radio" name="side" value="heads" required checked>
+                Heads
+            </label>
+            <label>
+                <input type="radio" name="side" value="tails" required>
+                Tails
+            </label>
+        </p>
+
+        <p>
+            <button>Toss It!</button>
+        </p>
+    </form>
+</body>
+</html>
