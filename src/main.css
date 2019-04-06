@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+}
+
+section, form {
+    margin: 25px 0;
+}
+
+#coin-toss {
+    min-height:125px;
+    margin: auto;
+}
+
+.score-count {
+    font-weight: bold;
+    margin-right: 10px;
+}
