@@ -1,17 +1,5 @@
+import getHeadsOrTails from '../src/get-heads-or-tails.js';
 const test = QUnit.test;
-
-function getHeadsOrTails(randomNumber) {   
-    let side = '';
-     
-    if(randomNumber < .5) {
-        side = 'heads';
-    }
-    else {
-        side = 'tails';
-    }
-
-    return side;
-}
 
 test('get Heads', function(assert) {
     //Arrange
@@ -21,4 +9,9 @@ test('get Heads', function(assert) {
     const side = getHeadsOrTails(randomResult);
     //Assert
     assert.equal(side, expected);
+});
+
+test('get tails', function(assert) {
+    const side = getHeadsOrTails(.5);
+    assert.equal(side, 'tails');
 });
