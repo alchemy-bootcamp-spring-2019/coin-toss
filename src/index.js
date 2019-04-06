@@ -27,11 +27,15 @@ function flipCoinAndReveal() {
 function winOrLoseAndSetStatus(userChoice, tossedSide) {
     if(userChoice === tossedSide) {
         status.textContent = 'You win!';
+        status.classList.remove('lose');
+        status.classList.add('win');
         wins++;
         winCount.textContent = wins;
     }
     else {
         status.textContent = 'You lose!';
+        status.classList.remove('win');
+        status.classList.add('lose');
         losses++;
         lossCount.textContent = losses;
     } 
