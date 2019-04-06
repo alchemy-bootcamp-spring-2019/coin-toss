@@ -1,5 +1,18 @@
 const test = QUnit.test;
 
+function getHeadsOrTails(randomNumber) {   
+    let side = '';
+     
+    if(randomNumber < .5) {
+        side = 'heads';
+    }
+    else {
+        side = 'tails';
+    }
+
+    return side;
+}
+
 test('get Heads', function(assert) {
     //Arrange
     const expected = 'heads';
